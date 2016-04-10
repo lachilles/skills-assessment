@@ -29,11 +29,11 @@ def all_odd(number_list):
         []
 
     """
-    all_odd = []
+    all_odd = [i for i in number_list if i % 2 != 0]
     
-    for i in number_list:
-        if i % 2 != 0:
-            all_odd.append(i)
+    # for i in number_list:
+    #     if i % 2 != 0:
+    #         all_odd.append(i)
     
     return all_odd
 
