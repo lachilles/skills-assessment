@@ -164,7 +164,17 @@ def smallest_int(number_list):
 
     """
 
-    return 100
+    smallest_int = (number_list)
+    smallest_int.sort()
+    x = None
+
+    for i in number_list:
+        if number_list[0] > x:
+            return number_list[0]
+        elif smallest_int == []:
+            return True
+        else: 
+            return False
 
 
 def largest_int(number_list):
@@ -185,7 +195,18 @@ def largest_int(number_list):
 
     """
 
-    return 0
+    largest_int = (number_list)
+    largest_int.sort()
+    x = None
+
+    for i in number_list:
+        if number_list[0] > x:
+            return number_list[-1]
+        elif largest_int == []:
+            return True
+        else: 
+            return False
+
 
 
 def halvesies(number_list):
