@@ -114,15 +114,17 @@ def long_words(word_list):
 
     """
 
-    #long_words = [word for word in word_list if len(word) > 4]
-
-    long_words = []
-
-    for word in word_list:
-        if len(word) > 4:
-            long_words.append(word) 
+    long_words = [word for word in word_list if len(word) > 4]
 
     return long_words
+
+    # long_words = []
+
+    # for word in word_list:
+    #     if len(word) > 4:
+    #         long_words.append(word) 
+
+    # return long_words
 
 def n_long_words(word_list, n):
     """Return all words in input list that are longer than n characters.
@@ -134,12 +136,14 @@ def n_long_words(word_list, n):
     ['apples', 'bananas']
     """
 
-    n_long_words = []
+    # n_long_words = []
 
-    for word in word_list:
-        if len(word) > n:
-            n_long_words.append(word)
+    # for word in word_list:
+    #     if len(word) > n:
+    #         n_long_words.append(word)
 
+
+    n_long_words = [word for word in word_list if len(word) > n]
 
     return n_long_words
 
