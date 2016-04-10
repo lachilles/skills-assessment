@@ -30,9 +30,12 @@ def all_odd(number_list):
 
     """
     all_odd = []
-    for i in number_list
-        if i :
-            all_odd.append(number):
+    
+    for i in number_list:
+        if i % 2 != 0:
+            all_odd.append(i)
+    
+    return all_odd
 
     # all_odd = [i for i in number_list if i % 2 !== 0]
     # return all_odd
@@ -65,7 +68,9 @@ def every_other_item(my_list):
 
     """
 
-    return ['the wrong thing']
+    every_other_item = (my_list)
+    return every_other_item[::2]
+
 
 def print_indexes(my_list):
     """Print the index of each item in the input_list, followed by the item itself.
@@ -87,7 +92,15 @@ def print_indexes(my_list):
 
     """
 
-    print "Nothing at all"
+    print_indexes = (my_list)
+    for i in range(len(print_indexes)):
+        print i, print_indexes[i]
+
+
+    # print_indexes = (my_list)
+    # for i, v in enumerate([my_list]):
+    #     print i, v
+
 
 
 def long_words(word_list):
@@ -101,8 +114,15 @@ def long_words(word_list):
 
     """
 
-    return ['the wrong thing']
+    #long_words = [word for word in word_list if len(word) > 4]
 
+    long_words = []
+
+    for word in word_list:
+        if len(word) > 4:
+            long_words.append(word) 
+
+    return long_words
 
 def n_long_words(word_list, n):
     """Return all words in input list that are longer than n characters.
@@ -114,7 +134,14 @@ def n_long_words(word_list, n):
     ['apples', 'bananas']
     """
 
-    return ['the wrong thing']
+    n_long_words = []
+
+    for word in word_list:
+        if len(word) > n:
+            n_long_words.append(word)
+
+
+    return n_long_words
 
 
 def smallest_int(number_list):
