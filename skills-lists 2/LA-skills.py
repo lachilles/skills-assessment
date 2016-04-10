@@ -226,7 +226,16 @@ def halvesies(number_list):
 
     """
 
-    return []
+    halvesies = [float(i) / 2 for i in number_list]
+
+    return halvesies
+
+
+    # n_long_words = [word for word in word_list if len(word) > n]
+
+    # return n_long_words
+
+
 
 
 def word_lengths(word_list):
