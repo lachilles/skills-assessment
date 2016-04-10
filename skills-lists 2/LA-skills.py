@@ -246,7 +246,10 @@ def word_lengths(word_list):
 
     """
 
-    return []
+
+    word_lengths = [len(word) for word in word_list]
+
+    return word_lengths
 
 
 def sum_numbers(number_list):
