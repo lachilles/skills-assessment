@@ -27,13 +27,13 @@
 # multiply(2, 3)
 
 
-def repeat(x, y):
+# def repeat(x, y):
 
-	"""Repeat x y times"""
-	print str(x) * int(y)
+# 	"""Repeat x y times"""
+# 	print str(x) * int(y)
 
 
-repeat("hello", 5)
+# repeat("hello", 5)
 
 # def zero(x):
 
@@ -49,6 +49,22 @@ repeat("hello", 5)
 # 		print "I don't understand that"
 
 # zero(5)
+
+def divisible_by_3(x):
+
+	"""Evaluate whether x is divisible by 3"""
+
+	if int(x) % 3 == 0:
+		print True
+	elif int(x) % 3 != 0:
+		print False
+	else:
+		print "I don't understand that"
+
+divisible_by_3(10)
+
+
+
 
 
 
