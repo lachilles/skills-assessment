@@ -267,6 +267,21 @@ def sum_numbers(number_list):
         0
 
     """
+    
+    # len(number_list) = s     
+    # for i in range(s)
+    #     add()
+    # sum_numbers =  [i for i
+    
+
+    # sum_numbers = [add(range(number_list[0]):(number_list[-1])]) for 
+
+    # how do you sum without using the build-in sum?
+
+
+    # n_long_words = [word for word in word_list if len(word) > n]
+
+    # return n_long_words
 
     return None
 
@@ -309,6 +324,47 @@ def join_strings(word_list):
 
     """
 
+    # join_strings = (word_list)
+    # a, b, *rest = join_strings
+    # if a = None:
+    #     return ''
+    # else:
+    #     return join_strings
+
+
+    # # # for word in word_list:
+    # #     if word == '':
+    # #         return ''
+    # #     elif word != '': 
+    # #         join_strings.add(word)
+
+    # return join_strings
+
+
+
+    # n_long_words = []
+
+    # for word in word_list:
+    #     if len(word) > n:
+    #         n_long_words.append(word)
+
+
+    # n_long_words = [word for word in word_list if len(word) > n]
+
+    # return n_long_words
+
+    # largest_int = (number_list)
+    # largest_int.sort()
+    # x = None
+
+    # for i in number_list:
+    #     if number_list[0] > x:
+    #         return number_list[-1]
+    #     elif largest_int == []:
+    #         return True
+    #     else: 
+    #         return False
+
     return "Not the right thing"
 
 
@@ -321,6 +377,22 @@ def average(number_list):
     There is no defined answer if the list given is empty. It's fine if
     this raises an error when given an empty list.
     """
+
+
+    # average = []
+    # for i in 
+
+
+    # halvesies = [float(i) / 2 for i in number_list]
+
+    # return halvesies
+
+
+    # n_long_words = [word for word in word_list if len(word) > n]
+
+    # return n_long_words
+
+
 
     return 0
 
