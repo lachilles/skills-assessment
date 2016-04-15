@@ -268,6 +268,14 @@ def sum_numbers(number_list):
 
     """
     
+    total = 0
+    
+    for current_number in number_list:
+        total = total + current_number
+    
+    return total
+
+
     # len(number_list) = s     
     # for i in range(s)
     #     add()
@@ -282,8 +290,6 @@ def sum_numbers(number_list):
     # n_long_words = [word for word in word_list if len(word) > n]
 
     # return n_long_words
-
-    return None
 
 
 def mult_numbers(number_list):
@@ -305,7 +311,13 @@ def mult_numbers(number_list):
 
     """
 
-    return None
+    total = 1
+
+    for current_number in number_list:
+        total = total * current_number
+
+
+    return total
 
 
 def join_strings(word_list):
@@ -323,6 +335,14 @@ def join_strings(word_list):
         ''
 
     """
+    result = ""
+    
+    for word in word_list:
+        result = result + word
+    
+    return result
+
+
 
     # join_strings = (word_list)
     # a, b, *rest = join_strings
@@ -365,7 +385,6 @@ def join_strings(word_list):
     #     else: 
     #         return False
 
-    return "Not the right thing"
 
 
 def average(number_list):
@@ -378,6 +397,13 @@ def average(number_list):
     this raises an error when given an empty list.
     """
 
+
+
+    total = sum(number_list)
+
+    average = float(total) / float(len(number_list))
+    
+    return average
 
     # average = []
     # for i in 
@@ -394,9 +420,6 @@ def average(number_list):
 
 
 
-    return 0
-
-
 def join_strings_with_comma(list_of_words):
     """Return ['list', 'of', 'words'] like "list, of, words".
 
@@ -411,7 +434,7 @@ def join_strings_with_comma(list_of_words):
 
     """
 
-    return ""
+    return ", ".join(list_of_words)
 
 
 def foods_in_common(foods1, foods2):
@@ -431,7 +454,17 @@ def foods_in_common(foods1, foods2):
 
     """
 
-    return set(['the wrong thing'])
+    return set(set(foods1)) & set(foods2)
+
+
+
+    # total = 1
+
+    # for current_number in number_list:
+    #     total = total * current_number
+
+
+    # return total
 
 
 def reverse_list(my_list):
