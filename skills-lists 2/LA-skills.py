@@ -479,8 +479,20 @@ def reverse_list(my_list):
         ['I', 'love', 'cookies']
 
     """
+    length = len(my_list) - 1
+    reverse_list = []
 
-    return []
+
+    for number in my_list:
+        reverse_list.append(my_list[length])
+        length = length - 1
+
+
+    return reverse_list
+
+    # another solution
+    # return my_list[::-1]
+    
 
 
 def reverse_list_in_place(my_list):
@@ -490,16 +502,17 @@ def reverse_list_in_place(my_list):
 
        Do not use the python methed reverse()/reversed()
 
-        >>> reverse_list([1, 2, 3])
+        >>> reverse_list_in_place([1, 2, 3])
         [3, 2, 1]
 
-        >>> reverse_list(["cookies", "love", "I"])
+        >>> reverse_list_in_place(["cookies", "love", "I"])
         ['I', 'love', 'cookies']
 
 
     """
 
-    return []
+
+    return 
 
 
 def duplicates(my_list):
@@ -515,6 +528,7 @@ def duplicates(my_list):
 
     """
 
+     
     return []
 
 
