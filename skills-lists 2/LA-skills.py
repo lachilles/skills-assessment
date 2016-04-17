@@ -480,8 +480,22 @@ def reverse_list(my_list):
 
     """
 
-    return []
+    length = (range(len(my_list) - 1)
 
+
+    new_list = [item for item in my_list] 
+
+    return new_list
+
+    #     print_indexes = (my_list)
+    # for i in range(len(print_indexes)):
+    #     print i, print_indexes[i]
+
+    
+    # for i in number_list:
+    #     if i % 2 != 0:
+    #         all_odd.append(i)
+    
 
 def reverse_list_in_place(my_list):
     """Return the inputted list reversed--WITHOUT creating a new list.
@@ -499,7 +513,7 @@ def reverse_list_in_place(my_list):
 
     """
 
-    return []
+    return 
 
 
 def duplicates(my_list):
