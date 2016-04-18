@@ -1,0 +1,19 @@
+# Part 1: Discussion
+# What are the three main design advantages that object orientation can provide?
+Polymorphism
+
+# Explain each concept.
+
+# 1. What is a class?
+A class is 
+# 2. What is an instance attribute?
+
+# 3. What is a method?
+
+# 4. What is an instance in object orientation?
+
+# 5. How is a class attribute different than an instance attribute? Give an example of when you might use each.
+
+
+# Parts 2 through 5:
+# Create your classes and class methods

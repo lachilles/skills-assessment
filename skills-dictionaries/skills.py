@@ -164,6 +164,7 @@ def translate_to_pirate_talk(phrase):
 
     pirate_speak = {
         ("sir"): ("matey"),
+        ("man"): ("matey"),
         ("hotel"): ("fleabag inn"),
         ("student"): ("swabbie"),
         ("boy"): ("matey"),
@@ -194,6 +195,10 @@ def translate_to_pirate_talk(phrase):
 
     #     return result
 
+    # Without the + " ", the result returned a concatenated string
+    # cannot get this to run without the extra " " at the end of result...
+    # tried to encorporate len/range but unsuccessful so far
+
 
 def sort_by_word_length(words):
     """Given list of words, return list of ascending (len, [words]).
@@ -209,7 +214,20 @@ def sort_by_word_length(words):
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
     """
 
-    return []
+    t = []
+    for word in words:
+        if t[word] not in t:
+            t.append((len(word), word))
+        else:
+
+
+    t.sort 
+
+    result = []
+    for length, word in t:
+        result.append(word)
+
+    return t
 
 
 def get_sum_zero_pairs(numbers):
