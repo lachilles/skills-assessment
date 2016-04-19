@@ -216,6 +216,7 @@ def sort_by_word_length(words):
 
     buckets = []
 
+    # Look through each word in words
     for current_word in words:
         found = False
         word_len = len(current_word)
@@ -232,9 +233,11 @@ def sort_by_word_length(words):
 
         #If we never found a bucket to store current_word, create a new bucket.
         if not found:
-            buckets.append(word_len, [current_word])
+            buckets.append((word_len, [current_word]))
 
-    return buckets.sort()
+    buckets.sort()
+
+    return buckets
 
 
 
