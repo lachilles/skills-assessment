@@ -49,35 +49,61 @@ class Question(object):
         print self.question
         player_answer = raw_input("True or False: ")
         #Player inputs True or False
-        if player_answer is True or False:
-            return player_answer
+        if player_answer == self.answer:
+            return True
         else:
-            print "Please enter True or False"
+            return False
 
+class Exam(object):
+    """Exam class attribute sets exam name"""
 
-class Exam(Question):
-    """Exam class attributes inherits from question class and sets exam name"""
-
-    def __init__(self, name, questions):
-        super(Question, self).__init__(name)
+    def __init__(self, name):
+        # super(Question, self).__init__(name)
         self.name = name
-        self.questions = questions
-        questions = []
+        self.questions = []
 
-    def add_question(question, correct_answer):
-        exam = Exam('midterm')
-        exam.add_question.add()
-        question.ask_and_evaluate()
+    def add_question(self, question, correct_answer):
+        question = Question(question, correct_answer)
+        self.questions.append(question)
+        # exam = Exam('midterm')
+        # exam.add_question.add()
+        # question.ask_and_evaluate()
 
     def administer(self):
-        def __init__(self, score):
-            score = 0
-            super(Question, self).__init__()
-            for question in question.ask_and_evaluate():
-                if player_answer is True:
-                    score += 1
-                elif player_answer is False:
-                    pass
-                else:
-                    pass
+        score = 0
+        for current_question in self.questions:
+            is_correct = current_question.ask_and_evaluate()
+            if is_correct is True:
+                score += 1
+        return score
+
+
+        # def __init__(self, score):
+            # score = 0
+            # super(Question, self).__init__()
+            # for question in question.ask_and_evaluate():
+            #     if player_answer is True:
+            #         score += 1
+            #     elif player_answer is False:
+            #         pass
+            #     else:
+            #         pass
+
+volleyball_exam = Exam('Luke Skyblocker exam')
+volleyball_exam.add_question(
+    'Who is the newest player on the team? ', 'Vish')
+volleyball_exam.add_question(
+    'Who is the tallest player on the team? ', 'Christian')
+
+
+music_exam = Exam('Music exam')
+music_exam.add_question(
+    'What is #? ', 'sharpe')
+music_exam.add_question(
+    'What is my favorite queen song?', 'Christian')
+
+volleyball_exam.administer()
+
+
+
 
