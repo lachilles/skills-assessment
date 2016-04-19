@@ -160,7 +160,7 @@ def translate_to_pirate_talk(phrase):
     """
 
     result = ""
-    my_string = phrase.split()
+    my_list = phrase.split()
 
     pirate_speak = {
         ("sir"): ("matey"),
@@ -179,13 +179,13 @@ def translate_to_pirate_talk(phrase):
         ("is"): ("be")
         }
 
-    for word in my_string:
+    for word in my_list:
         if word in pirate_speak:
             result += pirate_speak[word] + " "
         else:
             result += word + " "
 
-    return result
+    return result.strip()
 
     # for word in range(0, len[my_string]):
     #         if word in pirate_speak:
@@ -214,20 +214,45 @@ def sort_by_word_length(words):
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
     """
 
-    t = []
-    for word in words:
-        if t[word] not in t:
-            t.append((len(word), word))
-        else:
+    buckets = []
+
+    for current_word in words:
+        found = False
+        word_len = len(current_word)
+        # Look through buckets and see if there's one to store the current_word
+        for current_bucket in buckets:
+            # If the current_word is allowed to be stored in current_bucket
+            if current_bucket[0] == word_len:
+                #Then, append the current_word to current_bucket[1]
+                current_bucket[1].append(current_word)
+                found = True
+
+        #If we never found a bucket to store the word in, we need to
+        #create a new bucket
+
+        #If we never found a bucket to store current_word, create a new bucket.
+        if not found:
+            buckets.append(word_len, [current_word])
+
+    return buckets.sort()
 
 
-    t.sort 
 
-    result = []
-    for length, word in t:
-        result.append(word)
 
-    return t
+        # if buckets[word] not in buckets:
+        #     buckets.append((len(word), [word]))
+        # #If 
+        # else:
+
+
+
+    # t.sort 
+
+    # result = []
+    # for length, word in t:
+    #     result.append(word)
+
+    # return t
 
 
 def get_sum_zero_pairs(numbers):
