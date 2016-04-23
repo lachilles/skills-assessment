@@ -1,0 +1,14 @@
+/* Your styles can go here. */
+
+input  {
+    background-color:yellow;
+}
+
+button {
+    background-color:yellow;
+}
+
+.bold {
+    font-weight: bold;
+}
+

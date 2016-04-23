@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>Skills-Web</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <h1> Application Form </h1>
+</head>
+<body>
+<fieldset>
+<p> Please fill in the following information, and click on submit </p></fieldset>
+<br>
+<br>
+<form action="/application" method="POST">
+    <label for="firstname">First Name: </label>
+    <input id="firstname" type="text" name="firstname">
+    
+    <label for="lastname">Last Name: </label>
+    <input class="bold" id="lastname" type="text" name="lastname"><br>
+    
+    <fieldset>
+    <legend>Choose a Job Title:</legend>
+
+    <input id="title" type="radio" name="title" value="software engineer"><label for="se">Software Engineer </label><br>
+    <input id="title" type="radio" name="title" value="qa engineer">
+    <label for="qa">QA Engineer </label><br>
+    <input id="title" type="radio" name="title" value="product manager"><label for="pm">Product Manager </label> <br>
+    </fieldset>
+    
+    <label for="salary">Salary Requirement: </label> <input id="salary" type="number" name="salary"><br>
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit
+        </button>
+
+</form>
+
+</body>
+</html>
