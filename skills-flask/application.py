@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -15,11 +15,24 @@ def index_page():
     return render_template("index.html")
 
 
-@app.route("/application-form", methods=["GET"])
+@app.route("/application-form")
 def application_form():
     """Show an application form"""
 
     return render_template("application-form.html")
+
+
+@app.route("/application", methods=["POST"])
+def application_response():
+    """Handles submission of a form in application-form.html to the
+    route /application"""
+    firstname = request.form.get("firstname")
+    lastname = request.form.get("lastname")
+    title = request.form.get("title")
+    salary = request.form.get("salary")
+
+    return render_template("application-response.html", firstname=firstname,
+                           lastname=lastname, salary=salary, title=title)
 
 
 if __name__ == "__main__":

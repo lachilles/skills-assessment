@@ -1,11 +1,15 @@
+{% extends 'base.html' %}
+
 <!doctype html>
 <html>
 <head>
     <title>Skills-Web</title>
     <link rel="stylesheet" href="/static/styles.css">
-    <h1> Application Form </h1>
 </head>
-<body>
+
+{% block body %}
+
+<h1> Application Form </h1>
 <fieldset>
 <p> Please fill in the following information, and click on submit </p></fieldset>
 <br>
@@ -33,5 +37,5 @@
 
 </form>
 
-</body>
+{% endblock%}
 </html>
