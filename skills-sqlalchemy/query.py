@@ -19,7 +19,9 @@ init_app()
 # Part 2: Write queries
 
 
+
 # Get the brand with the **id** of 8.
+Brand.query.get(8)
 
 # Get all models with the **name** Corvette and the **brand_name** Chevrolet.
 

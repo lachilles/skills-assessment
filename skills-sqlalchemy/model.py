@@ -2,6 +2,7 @@
 
 from flask_sqlalchemy import SQLAlchemy
 
+
 # Here's where we create the idea of our database. We're getting this through
 # the Flask-SQLAlchemy library. On db, we can find the `session`
 # object, where we do most of our interactions (like committing, etc.)
@@ -16,35 +17,35 @@ class Model(db.Model):
     """Car model."""
 
     __tablename__ = "models"
-    model_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     year = db.Column(db.Integer, nullable=True)
-    brand_name = db.Column(db.String(64), db.ForeignKey('models.brand_name'))
+    brand_name = db.Column(db.String(50), db.ForeignKey('brands.name'))
     name = db.Column(db.String(64), nullable=True)
 
-    brand_name = db.relationship("Brand")
+    brand = db.relationship('Brand')
 
     def __repr__(self):
         """Provide helpful representation when printed."""
 
-        return "<Model model_id=%s brand_name=%s>" % (self.model_id, self.brand_name)
+        return "<Model model_id=%s brand_name=%s>" % (self.id, self.brand_name)
 
 
 class Brand(db.Model):
     """Car brand."""
 
     __tablename__ = "brands"
-    brand_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String(64), db.ForeignKey('brands.name'))
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
     founded = db.Column(db.Integer, nullable=True)
     headquarters = db.Column(db.String(64), nullable=True)
     discontinued = db.Column(db.Integer, nullable=True)
 
-    name = db.relationship("Model")
+    models = db.relationship('Model')
 
     def __repr__(self):
         """Provide helpful representation when printed."""
 
-        return "<Model brand_id=%s name=%s>" % (self.brand_id, self.name)
+        return "<Model brand_id=%s name=%s>" % (self.id, self.name)
 
 
 # End Part 1
