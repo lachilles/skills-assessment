@@ -1,0 +1,62 @@
+Recursion
+1) Recursion is when a function calls itself
+2) A base case is necessary so that the function knows when it's finished calling iteself.
+
+Graphs
+1) Nodes in a graph have 0_ connections; cyclic or acyclic, directed or undirected.
+2) Graphs contain loops, while trees do not. Trees have hierarchy but graphs do not.
+3) Facebook friends, Lyft pool rides
+
+Performance of Data Stuctures
+Python List - Add-L - O(n)
+Python List - Pop-L - O(n)
+Python List - Pop-R - O(n)
+Linked List - Index - 
+Linked List - Search
+Linked List - Add-R
+Linked List - Add-L
+Linked List - Pop-L
+Linked List - Pop-R
+Doubly Linked List - Index - 
+Doubly Linked List - Search -
+Doubly Linked List - Add-R - 
+Doubly Linked List - Add-L - 
+Doubly Linked List - Pop-L -
+Doubly Linked List - Pop-R -
+Queue(as array) - Add-R -
+Queue(as array) - Pop-L -
+Queue(as LL) - Add-R - 
+Queue(as LL) - Add-R -
+Stack (as Array, LL, or DLL) - Add-R - 
+Stack (as Array, LL, or DLL) Pop-R -
+Deque (as DLL) - Add-R
+Deque (as DLL) - Add-L
+Deque (as DLL) - Pop-L
+Deque (as DLL) - Pop-R
+
+Runtime and Memory
+Set - Get - O(1)
+Set - Add - O(1)
+Set - Delete - O(1)
+Set - Iterate - O(n)
+Set - Memory - medium
+Binary Search Tree - Get - 
+Binary Search Tree - Add - 
+Binary Search Tree - Delete - 
+Binary Search Tree - Iterate - 
+Binary Search Tree - Memory - 
+Tree - Get - 
+Tree - Add - 
+Tree - Delete - 
+Tree - Iterate - 
+Tree - Memory - 
+
+Sorting
+1) Bubble sort algorithm is when two numbers next to eachother in a list compares whether or not the left number is bigger, and if it is, stays the same. If the right number is bigger they swap places. They do this process the same number of times as the length of the list until the list is fully sorted.
+2) Merge sort is when you take two sorted lists, initialize new, empty list for results, compare the first element of each sorted list, move the smaller item to the results list and contine comparing 1st elements of each list until a list is empty. Append the remaining items from the other list to results list. 
+3) Quick sory has a pivot divider that checks if the first number in the list is smaller than the pivot. If it's smaller, then it'll move the number to the right of the first number. It keeps doing this on its halves until it has a fully sorted list.
+
+Git branching
+1) When you want to try something new without impacting work on the master branch.
+2) A pull requests is when you can share changes you've pushed to a respository on Github to a group of interested parties for review.
+
